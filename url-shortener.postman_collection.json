@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "86d5f7b1-0dbc-47cd-95bd-c54001e9256a",
+		"_postman_id": "753d4fa9-6f5e-4939-83db-f80cd0270766",
 		"name": "url-shortener",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -20,10 +20,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{0000HOST}}/v1/shortened/url",
+					"raw": "http://localhost:8080/v1/shortened/url",
+					"protocol": "http",
 					"host": [
-						"{{0000HOST}}"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"v1",
 						"shortened",
@@ -39,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/v1/shortened/QMlwrc",
+					"raw": "http://localhost:8080/v1/shortened/ualtJl",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -48,7 +50,7 @@
 					"path": [
 						"v1",
 						"shortened",
-						"QMlwrc"
+						"ualtJl"
 					]
 				}
 			},
