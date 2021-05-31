@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/v1/shortened/url" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-05-31T13:11:38" hostname="Nialls-MacBook-Pro.local" time="0.083">
+  <properties/>
+  <testcase name="should return Bad Request if the ID is over 6 characters()" classname="org.nmccarra1.url.shortener.routes.UrlShortenerTest$PostUrlWithId" time="0.026"/>
+  <testcase name="should create a shortened url for given new ID()" classname="org.nmccarra1.url.shortener.routes.UrlShortenerTest$PostUrlWithId" time="0.013"/>
+  <testcase name="should return Bad Request if the ID is not base64()" classname="org.nmccarra1.url.shortener.routes.UrlShortenerTest$PostUrlWithId" time="0.011"/>
+  <testcase name="should generate a random ID base64 when ID is not provided in request body()" classname="org.nmccarra1.url.shortener.routes.UrlShortenerTest$PostUrlWithId" time="0.015"/>
+  <testcase name="should return Conflict for existing ID()" classname="org.nmccarra1.url.shortener.routes.UrlShortenerTest$PostUrlWithId" time="0.016"/>
+  <system-out><![CDATA[{"timestamp":"2021-05-31T13:11:38.440Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"No ktor.deployment.watch patterns specified, automatic reload is not active","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.443Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-4 - Starting...","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.444Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-4 - Start completed.","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.462Z","level":"INFO","thread":"DefaultDispatcher-worker-3 @request#8","logger":"ktor.test","message":"400 Bad Request: POST - /v1/shortened/url","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.464Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopping: io.ktor.application.Application@59c74a8b","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.464Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopped: io.ktor.application.Application@59c74a8b","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.466Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"No ktor.deployment.watch patterns specified, automatic reload is not active","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.469Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-5 - Starting...","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.469Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-5 - Start completed.","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.477Z","level":"INFO","thread":"DefaultDispatcher-worker-1 @request#12","logger":"ktor.test","message":"200 OK: POST - /v1/shortened/url","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.478Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopping: io.ktor.application.Application@d8a97a0","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.478Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopped: io.ktor.application.Application@d8a97a0","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.479Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"No ktor.deployment.watch patterns specified, automatic reload is not active","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.482Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-6 - Starting...","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.483Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-6 - Start completed.","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.487Z","level":"INFO","thread":"DefaultDispatcher-worker-4 @request#16","logger":"ktor.test","message":"400 Bad Request: POST - /v1/shortened/url","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.489Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopping: io.ktor.application.Application@e892324","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.489Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopped: io.ktor.application.Application@e892324","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.490Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"No ktor.deployment.watch patterns specified, automatic reload is not active","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.493Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-7 - Starting...","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.494Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-7 - Start completed.","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.504Z","level":"INFO","thread":"DefaultDispatcher-worker-2 @request#20","logger":"ktor.test","message":"200 OK: POST - /v1/shortened/url","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.504Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopping: io.ktor.application.Application@15061a7e","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.504Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopped: io.ktor.application.Application@15061a7e","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.507Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"No ktor.deployment.watch patterns specified, automatic reload is not active","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.512Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-8 - Starting...","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.513Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-8 - Start completed.","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.520Z","level":"INFO","thread":"DefaultDispatcher-worker-3 @request#24","logger":"ktor.test","message":"409 Conflict: POST - /v1/shortened/url","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.521Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopping: io.ktor.application.Application@7d673e51","context":"default","appVersion":"MISSING_APP_VERSION"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

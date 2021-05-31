@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - /v1/shortened/url</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>/v1/shortened/url</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.nmccarra1.url.shortener.routes.html">org.nmccarra1.url.shortener.routes</a> &gt; UrlShortenerTest$PostUrlWithId</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.081s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">should create a shortened url for given new ID()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">should generate a random ID base64 when ID is not provided in request body()</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">should return Bad Request if the ID is not base64()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">should return Bad Request if the ID is over 6 characters()</td>
+<td class="success">0.026s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">should return Conflict for existing ID()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.440Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;No ktor.deployment.watch patterns specified, automatic reload is not active&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.443Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-4 - Starting...&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.444Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-4 - Start completed.&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.462Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-3 @request#8&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;400 Bad Request: POST - /v1/shortened/url&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.464Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopping: io.ktor.application.Application@59c74a8b&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.464Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopped: io.ktor.application.Application@59c74a8b&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.466Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;No ktor.deployment.watch patterns specified, automatic reload is not active&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.469Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-5 - Starting...&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.469Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-5 - Start completed.&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.477Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-1 @request#12&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;200 OK: POST - /v1/shortened/url&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.478Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopping: io.ktor.application.Application@d8a97a0&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.478Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopped: io.ktor.application.Application@d8a97a0&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.479Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;No ktor.deployment.watch patterns specified, automatic reload is not active&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.482Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-6 - Starting...&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.483Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-6 - Start completed.&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.487Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-4 @request#16&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;400 Bad Request: POST - /v1/shortened/url&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.489Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopping: io.ktor.application.Application@e892324&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.489Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopped: io.ktor.application.Application@e892324&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.490Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;No ktor.deployment.watch patterns specified, automatic reload is not active&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.493Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-7 - Starting...&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.494Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-7 - Start completed.&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.504Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-2 @request#20&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;200 OK: POST - /v1/shortened/url&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.504Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopping: io.ktor.application.Application@15061a7e&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.504Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopped: io.ktor.application.Application@15061a7e&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.507Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;No ktor.deployment.watch patterns specified, automatic reload is not active&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.512Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-8 - Starting...&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.513Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;com.zaxxer.hikari.HikariDataSource&quot;,&quot;message&quot;:&quot;HikariPool-8 - Start completed.&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.520Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-3 @request#24&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;409 Conflict: POST - /v1/shortened/url&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.521Z&quot;,&quot;level&quot;:&quot;INFO&quot;,&quot;thread&quot;:&quot;Test worker&quot;,&quot;logger&quot;:&quot;ktor.test&quot;,&quot;message&quot;:&quot;Application stopping: io.ktor.application.Application@7d673e51&quot;,&quot;context&quot;:&quot;default&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8</a> at 31 May 2021, 14:11:38</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UrlShortenerService.create</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UrlShortenerService.create</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.nmccarra1.url.shortener.services.html">org.nmccarra1.url.shortener.services</a> &gt; UrlMappingsServiceTest$CreateShortenedUrl</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.015s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">should create a shortened url for given url()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">should throw an exception a new record is attempted to be created with an existing shortened url()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.554Z&quot;,&quot;level&quot;:&quot;WARN&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-2 @coroutine#32&quot;,&quot;logger&quot;:&quot;Exposed&quot;,&quot;message&quot;:&quot;Transaction attempt #0 failed: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]. Statement(s): INSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?)&quot;,&quot;context&quot;:&quot;default&quot;,&quot;exception&quot;:&quot;org.jetbrains.exposed.exceptions.ExposedSQLException: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]\n\tat org.jetbrains.exposed.sql.statements.Statement.executeIn$exposed_core(Statement.kt:63)\n\tat org.jetbrains.exposed.sql.Transaction.exec(Transaction.kt:126)\n\tat org.jetbrains.exposed.sql.Transaction.exec(Transaction.kt:112)\n\tat org.jetbrains.exposed.sql.statements.Statement.execute(Statement.kt:29)\n\tat org.jetbrains.exposed.sql.QueriesKt.insert(Queries.kt:73)\n\tat org.nmccarra1.url.shortener.dao.UrlMappingsTable$insert$2.invoke(UrlMappingsTable.kt:32)\n\tat org.nmccarra1.url.shortener.dao.UrlMappingsTable$insert$2.invoke(UrlMappingsTable.kt:15)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2$1.invoke(MySqlConnectionProvider.kt:24)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2$1.invoke(MySqlConnectionProvider.kt:14)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$inTopLevelTransaction$1.invoke(ThreadLocalTransactionManager.kt:170)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$inTopLevelTransaction$2.invoke(ThreadLocalTransactionManager.kt:211)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.keepAndRestoreTransactionRefAfterRun(ThreadLocalTransactionManager.kt:219)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.inTopLevelTransaction(ThreadLocalTransactionManager.kt:210)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$transaction$1.invoke(ThreadLocalTransactionManager.kt:148)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.keepAndRestoreTransactionRefAfterRun(ThreadLocalTransactionManager.kt:219)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.transaction(ThreadLocalTransactionManager.kt:120)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.transaction(ThreadLocalTransactionManager.kt:118)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2.invokeSuspend(MySqlConnectionProvider.kt:23)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:56)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:738)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\nCaused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]\n\tat org.h2.message.DbException.getJdbcSQLException(DbException.java:457)\n\tat org.h2.message.DbException.getJdbcSQLException(DbException.java:427)\n\tat org.h2.message.DbException.get(DbException.java:205)\n\tat org.h2.message.DbException.get(DbException.java:181)\n\tat org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:103)\n\tat org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:220)\n\tat org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:196)\n\tat org.h2.mvstore.db.MVTable.addRow(MVTable.java:546)\n\tat org.h2.command.dml.Insert.insertRows(Insert.java:180)\n\tat org.h2.command.dml.Insert.update(Insert.java:132)\n\tat org.h2.command.CommandContainer.update(CommandContainer.java:133)\n\tat org.h2.command.Command.executeUpdate(Command.java:267)\n\tat org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)\n\tat org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)\n\tat com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)\n\tat com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)\n\tat org.jetbrains.exposed.sql.statements.jdbc.JdbcPreparedStatementImpl.executeUpdate(JdbcPreparedStatementImpl.kt:23)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.execInsertFunction(InsertStatement.kt:109)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.executeInternal(InsertStatement.kt:115)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.executeInternal(InsertStatement.kt:14)\n\tat org.jetbrains.exposed.sql.statements.Statement.executeIn$exposed_core(Statement.kt:61)\n\t... 23 common frames omitted\n&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.556Z&quot;,&quot;level&quot;:&quot;WARN&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-2 @coroutine#32&quot;,&quot;logger&quot;:&quot;Exposed&quot;,&quot;message&quot;:&quot;Transaction attempt #1 failed: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]. Statement(s): INSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?)&quot;,&quot;context&quot;:&quot;default&quot;,&quot;exception&quot;:&quot;org.jetbrains.exposed.exceptions.ExposedSQLException: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]\n\tat org.jetbrains.exposed.sql.statements.Statement.executeIn$exposed_core(Statement.kt:63)\n\tat org.jetbrains.exposed.sql.Transaction.exec(Transaction.kt:126)\n\tat org.jetbrains.exposed.sql.Transaction.exec(Transaction.kt:112)\n\tat org.jetbrains.exposed.sql.statements.Statement.execute(Statement.kt:29)\n\tat org.jetbrains.exposed.sql.QueriesKt.insert(Queries.kt:73)\n\tat org.nmccarra1.url.shortener.dao.UrlMappingsTable$insert$2.invoke(UrlMappingsTable.kt:32)\n\tat org.nmccarra1.url.shortener.dao.UrlMappingsTable$insert$2.invoke(UrlMappingsTable.kt:15)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2$1.invoke(MySqlConnectionProvider.kt:24)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2$1.invoke(MySqlConnectionProvider.kt:14)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$inTopLevelTransaction$1.invoke(ThreadLocalTransactionManager.kt:170)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$inTopLevelTransaction$2.invoke(ThreadLocalTransactionManager.kt:211)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.keepAndRestoreTransactionRefAfterRun(ThreadLocalTransactionManager.kt:219)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.inTopLevelTransaction(ThreadLocalTransactionManager.kt:210)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$transaction$1.invoke(ThreadLocalTransactionManager.kt:148)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.keepAndRestoreTransactionRefAfterRun(ThreadLocalTransactionManager.kt:219)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.transaction(ThreadLocalTransactionManager.kt:120)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.transaction(ThreadLocalTransactionManager.kt:118)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2.invokeSuspend(MySqlConnectionProvider.kt:23)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:56)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:738)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\nCaused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]\n\tat org.h2.message.DbException.getJdbcSQLException(DbException.java:457)\n\tat org.h2.message.DbException.getJdbcSQLException(DbException.java:427)\n\tat org.h2.message.DbException.get(DbException.java:205)\n\tat org.h2.message.DbException.get(DbException.java:181)\n\tat org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:103)\n\tat org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:220)\n\tat org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:196)\n\tat org.h2.mvstore.db.MVTable.addRow(MVTable.java:546)\n\tat org.h2.command.dml.Insert.insertRows(Insert.java:180)\n\tat org.h2.command.dml.Insert.update(Insert.java:132)\n\tat org.h2.command.CommandContainer.update(CommandContainer.java:133)\n\tat org.h2.command.Command.executeUpdate(Command.java:267)\n\tat org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)\n\tat org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)\n\tat com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)\n\tat com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)\n\tat org.jetbrains.exposed.sql.statements.jdbc.JdbcPreparedStatementImpl.executeUpdate(JdbcPreparedStatementImpl.kt:23)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.execInsertFunction(InsertStatement.kt:109)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.executeInternal(InsertStatement.kt:115)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.executeInternal(InsertStatement.kt:14)\n\tat org.jetbrains.exposed.sql.statements.Statement.executeIn$exposed_core(Statement.kt:61)\n\t... 23 common frames omitted\n&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+{&quot;timestamp&quot;:&quot;2021-05-31T13:11:38.557Z&quot;,&quot;level&quot;:&quot;WARN&quot;,&quot;thread&quot;:&quot;DefaultDispatcher-worker-2 @coroutine#32&quot;,&quot;logger&quot;:&quot;Exposed&quot;,&quot;message&quot;:&quot;Transaction attempt #2 failed: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]. Statement(s): INSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?)&quot;,&quot;context&quot;:&quot;default&quot;,&quot;exception&quot;:&quot;org.jetbrains.exposed.exceptions.ExposedSQLException: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]\n\tat org.jetbrains.exposed.sql.statements.Statement.executeIn$exposed_core(Statement.kt:63)\n\tat org.jetbrains.exposed.sql.Transaction.exec(Transaction.kt:126)\n\tat org.jetbrains.exposed.sql.Transaction.exec(Transaction.kt:112)\n\tat org.jetbrains.exposed.sql.statements.Statement.execute(Statement.kt:29)\n\tat org.jetbrains.exposed.sql.QueriesKt.insert(Queries.kt:73)\n\tat org.nmccarra1.url.shortener.dao.UrlMappingsTable$insert$2.invoke(UrlMappingsTable.kt:32)\n\tat org.nmccarra1.url.shortener.dao.UrlMappingsTable$insert$2.invoke(UrlMappingsTable.kt:15)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2$1.invoke(MySqlConnectionProvider.kt:24)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2$1.invoke(MySqlConnectionProvider.kt:14)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$inTopLevelTransaction$1.invoke(ThreadLocalTransactionManager.kt:170)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$inTopLevelTransaction$2.invoke(ThreadLocalTransactionManager.kt:211)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.keepAndRestoreTransactionRefAfterRun(ThreadLocalTransactionManager.kt:219)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.inTopLevelTransaction(ThreadLocalTransactionManager.kt:210)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt$transaction$1.invoke(ThreadLocalTransactionManager.kt:148)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.keepAndRestoreTransactionRefAfterRun(ThreadLocalTransactionManager.kt:219)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.transaction(ThreadLocalTransactionManager.kt:120)\n\tat org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt.transaction(ThreadLocalTransactionManager.kt:118)\n\tat org.nmccarra1.url.shortener.dao.MySqlConnectionProvider$dbQuery$2.invokeSuspend(MySqlConnectionProvider.kt:23)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:56)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:738)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n\tat kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\nCaused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: \&quot;PUBLIC.PRIMARY_KEY_4 ON PUBLIC.URL_MAPPINGS(ID) VALUES 4\&quot;; SQL statement:\nINSERT INTO URL_MAPPINGS (CREATED_AT, ID, URL) VALUES (?, ?, ?) [23505-199]\n\tat org.h2.message.DbException.getJdbcSQLException(DbException.java:457)\n\tat org.h2.message.DbException.getJdbcSQLException(DbException.java:427)\n\tat org.h2.message.DbException.get(DbException.java:205)\n\tat org.h2.message.DbException.get(DbException.java:181)\n\tat org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:103)\n\tat org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:220)\n\tat org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:196)\n\tat org.h2.mvstore.db.MVTable.addRow(MVTable.java:546)\n\tat org.h2.command.dml.Insert.insertRows(Insert.java:180)\n\tat org.h2.command.dml.Insert.update(Insert.java:132)\n\tat org.h2.command.CommandContainer.update(CommandContainer.java:133)\n\tat org.h2.command.Command.executeUpdate(Command.java:267)\n\tat org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)\n\tat org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)\n\tat com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)\n\tat com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)\n\tat org.jetbrains.exposed.sql.statements.jdbc.JdbcPreparedStatementImpl.executeUpdate(JdbcPreparedStatementImpl.kt:23)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.execInsertFunction(InsertStatement.kt:109)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.executeInternal(InsertStatement.kt:115)\n\tat org.jetbrains.exposed.sql.statements.InsertStatement.executeInternal(InsertStatement.kt:14)\n\tat org.jetbrains.exposed.sql.statements.Statement.executeIn$exposed_core(Statement.kt:61)\n\t... 23 common frames omitted\n&quot;,&quot;appVersion&quot;:&quot;MISSING_APP_VERSION&quot;}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8</a> at 31 May 2021, 14:11:38</p>
+</div>
+</div>
+</body>
+</html>

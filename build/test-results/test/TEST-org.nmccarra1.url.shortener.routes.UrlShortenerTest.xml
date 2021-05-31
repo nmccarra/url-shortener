@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.nmccarra1.url.shortener.routes.UrlShortenerTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Nialls-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <system-out><![CDATA[{"timestamp":"2021-05-31T13:11:36.579Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-1 - Starting...","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:36.677Z","level":"INFO","thread":"Test worker","logger":"com.zaxxer.hikari.HikariDataSource","message":"HikariPool-1 - Start completed.","context":"default","appVersion":"MISSING_APP_VERSION"}
+{"timestamp":"2021-05-31T13:11:38.521Z","level":"INFO","thread":"Test worker","logger":"ktor.test","message":"Application stopped: io.ktor.application.Application@7d673e51","context":"default","appVersion":"MISSING_APP_VERSION"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

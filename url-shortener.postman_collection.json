@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "86d5f7b1-0dbc-47cd-95bd-c54001e9256a",
+		"name": "url-shortener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/v1/shortened/url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\" : \"https://flyancerecords.bandcamp.com/album/kas-st-road-to-nowhere-road1\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{0000HOST}}/v1/shortened/url",
+					"host": [
+						"{{0000HOST}}"
+					],
+					"path": [
+						"v1",
+						"shortened",
+						"url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/v1/shortened/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/shortened/QMlwrc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shortened",
+						"QMlwrc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
